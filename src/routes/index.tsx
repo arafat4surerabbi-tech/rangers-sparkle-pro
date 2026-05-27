@@ -302,32 +302,36 @@ function Index() {
           <div className="max-w-3xl">
             <span className="fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent)] backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]" />
-              Licensed · Insured · 24/7
+              Serving Indianapolis And The Surrounding Areas
             </span>
             <h1 className="fade-up mt-6 font-display text-5xl font-bold uppercase leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-              Professional Cleaning.
+              Residential &amp; Commercial
               <br />
-              <span className="text-[color:var(--accent)]">Uncompromising Standards.</span>
+              <span className="text-[color:var(--accent)]">Janitorial Services</span>
             </h1>
             <p className="fade-up mt-6 max-w-2xl text-lg text-white/80 sm:text-xl">
-              Trusted by businesses, schools, medical facilities, and government buildings across
-              the region — Rangers Cleaning &amp; Contracting delivers spotless results every shift,
-              every time.
+              Rangers Cleaning and Contracting offers convenient janitorial services designed to
+              save clients time while helping them maintain their properties to keep them in the
+              best condition.
+            </p>
+            <p className="fade-up mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--accent)]">
+              Fully Licensed and Insured
             </p>
             <div className="fade-up mt-8 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => scrollTo("#services")}
-                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/80 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-[color:var(--primary)]"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[color:var(--accent)] px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-[color:var(--primary)] shadow-lg transition hover:brightness-95"
               >
-                Explore Services <ArrowRight className="h-4 w-4" />
+                See Our Services <ArrowRight className="h-4 w-4" />
               </button>
               <button
                 onClick={() => scrollTo("#contact")}
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-[color:var(--accent)] px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-[color:var(--primary)] shadow-lg transition hover:brightness-95"
+                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/80 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-[color:var(--primary)]"
               >
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </button>
             </div>
+
           </div>
 
           {/* Stats */}
