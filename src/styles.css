@@ -61,6 +61,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
+  --font-script: var(--font-script);
+  --font-accent: var(--font-accent);
 }
 
 :root {
@@ -99,8 +101,10 @@
   --sidebar-accent-foreground: oklch(0.21 0.045 258);
   --sidebar-border: oklch(0.91 0.012 250);
   --sidebar-ring: oklch(0.83 0.165 88);
-  --font-display: "Oswald", "Bebas Neue", system-ui, sans-serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-display: "Anek Bangla", system-ui, sans-serif;
+  --font-body: "Anek Bangla", system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --font-accent: "Montserrat", system-ui, sans-serif;
 }
 
 .dark {
