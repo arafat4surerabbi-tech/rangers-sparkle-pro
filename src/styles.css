@@ -76,13 +76,16 @@
   /* Navy #0A1628 */
   --primary: oklch(0.21 0.045 258);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.006 250);
-  --secondary-foreground: oklch(0.21 0.045 258);
+  /* Secondary #2CADE2 */
+  --secondary: oklch(0.704 0.131 231.3);
+  --secondary-foreground: oklch(0.99 0 0);
   --muted: oklch(0.96 0.006 250);
   --muted-foreground: oklch(0.45 0.02 258);
-  /* Yellow-gold #F5C518 */
-  --accent: oklch(0.83 0.165 88);
-  --accent-foreground: oklch(0.18 0.04 260);
+  /* Accent #283F96 (deep blue, replaces yellow) */
+  --accent: oklch(0.404 0.145 268);
+  --accent-foreground: oklch(0.99 0 0);
+  /* Brand quaternary kept for legacy yellow usage */
+  --brand-yellow: oklch(0.83 0.165 88);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.91 0.012 250);
