@@ -296,8 +296,7 @@ function Index() {
           height={1080}
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0A1628]/95 via-[#0A1628]/85 to-[#0A1628]/75" />
-        <div className="absolute inset-0 -z-10 bg-grid-dark opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0A1628]/70 via-[#0A1628]/20 to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-5 pb-16 pt-32 lg:px-8 lg:pt-40">
           <div className="max-w-3xl">
