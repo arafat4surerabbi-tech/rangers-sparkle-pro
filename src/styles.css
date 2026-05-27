@@ -146,5 +146,36 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
   }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Grid texture */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(10, 22, 40, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 22, 40, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Fade-up scroll animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
