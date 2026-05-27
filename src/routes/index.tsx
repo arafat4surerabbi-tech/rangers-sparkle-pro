@@ -307,26 +307,26 @@ function Index() {
             <h1 className="fade-up mt-6 font-display text-5xl font-bold uppercase leading-[1.02] text-white sm:text-6xl lg:text-7xl">
               Residential &amp; Commercial
               <br />
-              <span className="text-[color:var(--accent)]">Janitorial Services</span>
+              <span className="text-[#24A2D9]">Janitorial Services</span>
             </h1>
             <p className="fade-up mt-6 max-w-2xl text-lg text-white/80 sm:text-xl">
               Rangers Cleaning and Contracting offers convenient janitorial services designed to
               save clients time while helping them maintain their properties to keep them in the
               best condition.
             </p>
-            <p className="fade-up mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--accent)]">
+            <p className="fade-up mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#24A2D9]">
               Fully Licensed and Insured
             </p>
             <div className="fade-up mt-8 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => scrollTo("#services")}
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-[color:var(--accent)] px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-[color:var(--primary)] shadow-lg transition hover:brightness-95"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#24A2D9] px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-95"
               >
                 See Our Services <ArrowRight className="h-4 w-4" />
               </button>
               <button
                 onClick={() => scrollTo("#contact")}
-                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/80 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-[color:var(--primary)]"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[color:var(--brand-yellow)] px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-[color:var(--primary)] shadow-lg transition hover:brightness-95"
               >
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </button>
