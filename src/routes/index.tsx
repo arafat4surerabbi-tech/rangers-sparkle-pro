@@ -185,10 +185,31 @@ function Index() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/85 backdrop-blur-md shadow-[0_1px_0_rgba(10,22,40,0.08)]"
-            : "bg-transparent"
+            ? "bg-white/95 backdrop-blur-md shadow-[0_1px_0_rgba(10,22,40,0.08)]"
+            : "bg-white/80 backdrop-blur-sm"
         }`}
       >
+        {/* Top contact bar */}
+        <div className="bg-[color:var(--primary)] text-white">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2 text-xs lg:px-8">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+              <a href="tel:18006976455" className="flex items-center gap-1.5 font-semibold hover:text-[#24A2D9]">
+                <Phone className="h-3.5 w-3.5" /> (800) 697-6455
+                <span className="font-normal text-white/70">· 8am–6pm</span>
+              </a>
+              <a href="tel:3175312606" className="flex items-center gap-1.5 hover:text-[#24A2D9]">
+                <Phone className="h-3.5 w-3.5" /> Local: 317-531-2606
+              </a>
+              <a href="mailto:info@rangerscleaningandcontracting.com" className="flex items-center gap-1.5 hover:text-[#24A2D9]">
+                <Mail className="h-3.5 w-3.5" /> info@rangerscleaningandcontracting.com
+              </a>
+            </div>
+            <div className="flex items-center gap-1.5 text-white/80">
+              <MapPin className="h-3.5 w-3.5" /> Serving Indianapolis, IN & Surrounding Areas
+            </div>
+          </div>
+        </div>
+
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a
             href="#home"
@@ -200,9 +221,6 @@ function Index() {
           >
             <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-2 ring-[#24A2D9]/30">
               <img src={logoUrl} alt="Rangers Cleaning and Contracting logo" className="h-full w-full object-cover scale-125" />
-            </span>
-            <span className="font-display text-lg font-bold uppercase tracking-wide text-[color:var(--primary)] sm:text-xl">
-              Rangers <span className="text-[color:var(--primary)]/70">Cleaning &amp; Contracting</span>
             </span>
           </a>
 
