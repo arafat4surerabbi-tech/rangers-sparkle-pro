@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import logoUrl from "@/assets/logo.png";
 import {
   Shield,
   Menu,
@@ -197,8 +198,8 @@ function Index() {
             }}
             className="flex items-center gap-2.5"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--accent)]">
-              <Shield className="h-5 w-5" strokeWidth={2.5} />
+            <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-2 ring-[#24A2D9]/30">
+              <img src={logoUrl} alt="Rangers Cleaning and Contracting logo" className="h-full w-full object-cover scale-125" />
             </span>
             <span className="font-display text-lg font-bold uppercase tracking-wide text-[color:var(--primary)] sm:text-xl">
               Rangers <span className="text-[color:var(--primary)]/70">Cleaning &amp; Contracting</span>
