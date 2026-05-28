@@ -299,6 +299,12 @@ function Index() {
               <br />
               <span className="text-[#24A2D9]">Janitorial Services</span>
             </h1>
+            <p className="fade-up mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/85 sm:text-lg">
+              Rangers Cleaning and Contracting offers convenient janitorial services designed to save clients time while helping them maintain their properties to keep them in the best condition.
+            </p>
+            <p className="fade-up mt-4 font-script text-3xl text-[color:var(--accent)] sm:text-4xl">
+              Fully Licensed and Insured
+            </p>
             <div className="fade-up mt-8 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => scrollTo("#services")}
