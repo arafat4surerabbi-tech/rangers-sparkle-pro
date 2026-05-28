@@ -299,9 +299,6 @@ function Index() {
               <br />
               <span className="text-[#24A2D9]">Janitorial Services</span>
             </h1>
-            <p className="fade-up mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#24A2D9]">
-              Fully Licensed and Insured
-            </p>
             <div className="fade-up mt-8 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => scrollTo("#services")}
