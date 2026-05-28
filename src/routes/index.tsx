@@ -644,25 +644,25 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[color:var(--primary)] text-white">
+      <footer className="bg-white text-[color:var(--foreground)]">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-3 lg:px-8">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[color:var(--accent)] text-[color:var(--primary)]">
+              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[color:var(--primary)] text-white">
                 <Shield className="h-5 w-5" strokeWidth={2.5} />
               </span>
               <span className="font-display text-lg font-bold uppercase tracking-wide">
                 Rangers Cleaning &amp; Contracting
               </span>
             </div>
-            <p className="mt-4 max-w-sm text-sm text-white/70">
+            <p className="mt-4 max-w-sm text-sm text-[color:var(--foreground)]/70">
               Professional cleaning. Uncompromising standards. Serving commercial, medical,
               educational, and government facilities since 2015.
             </p>
           </div>
 
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--accent)]">
+            <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--primary)]">
               Quick Links
             </div>
             <ul className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
@@ -670,7 +670,7 @@ function Index() {
                 <li key={l.label}>
                   <button
                     onClick={() => scrollTo(l.href)}
-                    className="text-white/80 hover:text-[color:var(--accent)]"
+                    className="text-[color:var(--foreground)]/80 hover:text-[color:var(--accent)]"
                   >
                     {l.label}
                   </button>
@@ -680,7 +680,7 @@ function Index() {
           </div>
 
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--accent)]">
+            <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--primary)]">
               Follow Us
             </div>
             <div className="mt-4 flex gap-3">
@@ -689,7 +689,7 @@ function Index() {
                   key={i}
                   href="#"
                   aria-label="Social link"
-                  className="flex h-10 w-10 items-center justify-center rounded-md border border-white/15 bg-white/5 transition hover:bg-[color:var(--accent)] hover:text-[color:var(--primary)]"
+                  className="flex h-10 w-10 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--muted)] transition hover:bg-[color:var(--accent)] hover:text-[color:var(--primary)]"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -697,8 +697,8 @@ function Index() {
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-5 py-5 text-center text-xs text-white/60 lg:px-8">
+        <div className="border-t border-[color:var(--border)]">
+          <div className="mx-auto max-w-7xl px-5 py-5 text-center text-xs text-[color:var(--foreground)]/60 lg:px-8">
             © 2025 Rangers Cleaning &amp; Contracting. All rights reserved.
           </div>
         </div>
