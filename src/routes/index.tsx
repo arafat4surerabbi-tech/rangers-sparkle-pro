@@ -182,7 +182,7 @@ function Index() {
   return (
     <div id="home" className="min-h-screen bg-white text-[color:var(--foreground)]">
       {/* NAV */}
-      <header className="fixed inset-x-0 top-0 z-50 bg-white shadow-[0_1px_0_rgba(10,22,40,0.08)]">
+      <header className="absolute inset-x-0 top-0 z-50 bg-white shadow-[0_1px_0_rgba(10,22,40,0.08)]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
           <a
             href="#home"
