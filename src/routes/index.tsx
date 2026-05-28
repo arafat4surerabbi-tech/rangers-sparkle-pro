@@ -299,11 +299,6 @@ function Index() {
               <br />
               <span className="text-[#24A2D9]">Janitorial Services</span>
             </h1>
-            <p className="fade-up mt-6 max-w-2xl text-lg text-white/80 sm:text-xl">
-              Rangers Cleaning and Contracting offers convenient janitorial services designed to
-              save clients time while helping them maintain their properties to keep them in the
-              best condition.
-            </p>
             <p className="fade-up mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#24A2D9]">
               Fully Licensed and Insured
             </p>
