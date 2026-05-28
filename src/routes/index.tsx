@@ -182,26 +182,17 @@ function Index() {
   return (
     <div id="home" className="min-h-screen bg-white text-[color:var(--foreground)]">
       {/* NAV */}
-      <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-[0_1px_0_rgba(10,22,40,0.08)]"
-            : "bg-white/80 backdrop-blur-sm"
-        }`}
-      >
-
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <header className="fixed inset-x-0 top-0 z-50 bg-white shadow-[0_1px_0_rgba(10,22,40,0.08)]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
           <a
             href="#home"
             onClick={(e) => {
               e.preventDefault();
               scrollTo("#home");
             }}
-            className="flex items-center gap-2.5"
+            className="flex items-center"
           >
-            <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md ring-2 ring-[#24A2D9]/30">
-              <img src={logoUrl} alt="Rangers Cleaning and Contracting logo" className="h-full w-full object-cover scale-125" />
-            </span>
+            <img src={logoUrl} alt="Rangers Cleaning and Contracting" className="h-14 w-auto sm:h-16" />
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex">
