@@ -31,6 +31,9 @@ import {
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import teamImg from "../assets/team.jpg";
+import about1 from "@/assets/about-1.png";
+import about2 from "@/assets/about-2.png";
+import about3 from "@/assets/about-3.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -396,21 +399,11 @@ function Index() {
             </div>
 
 
-            <div className="fade-up relative">
-              <div className="absolute -inset-4 -z-10 rounded-2xl bg-[color:var(--accent)]/30" />
-              <img
-                src={teamImg}
-                alt="Rangers Cleaning team"
-                width={1024}
-                height={1024}
-                loading="lazy"
-                className="relative h-full w-full rounded-xl object-cover shadow-xl"
-              />
-              <div className="absolute -bottom-6 -left-6 hidden rounded-xl bg-[color:var(--primary)] px-6 py-5 text-white shadow-2xl sm:block">
-                <div className="font-display text-3xl font-bold text-[color:var(--accent)]">10+</div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
-                  Years Serving<br />Commercial Clients
-                </div>
+            <div className="fade-up bg-[color:var(--secondary)] p-6 shadow-xl">
+              <div className="grid grid-cols-2 gap-4">
+                <img src={about1} alt="Storefront window cleaning" loading="lazy" className="h-48 w-full object-cover sm:h-56" />
+                <img src={about2} alt="Refrigerator deep cleaning" loading="lazy" className="h-48 w-full object-cover sm:h-56" />
+                <img src={about3} alt="Commercial carpet cleaning" loading="lazy" className="col-span-2 h-56 w-full object-cover sm:h-72" />
               </div>
             </div>
           </div>
