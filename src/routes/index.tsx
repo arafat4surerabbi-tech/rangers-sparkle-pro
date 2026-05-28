@@ -647,13 +647,8 @@ function Index() {
       <footer className="bg-white text-[color:var(--foreground)]">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-3 lg:px-8">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[color:var(--primary)] text-white">
-                <Shield className="h-5 w-5" strokeWidth={2.5} />
-              </span>
-              <span className="font-display text-lg font-bold uppercase tracking-wide">
-                Rangers Cleaning &amp; Contracting
-              </span>
+            <div className="flex items-center">
+              <img src={logoUrl} alt="Rangers Cleaning & Contracting" className="h-20 w-auto sm:h-24" />
             </div>
             <p className="mt-4 max-w-sm text-sm text-[color:var(--foreground)]/70">
               Professional cleaning. Uncompromising standards. Serving commercial, medical,
