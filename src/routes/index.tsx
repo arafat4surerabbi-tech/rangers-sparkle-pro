@@ -353,26 +353,8 @@ function Index() {
           </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div className="fade-up">
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--accent)]">
-                Who We Are
-              </span>
-              <h2 className="mt-3 font-display text-4xl font-bold uppercase leading-tight text-[color:var(--primary)] sm:text-5xl">
-                Built on trust.
-                <br />
-                Measured in spotless results.
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
-                Rangers Cleaning &amp; Contracting is a fully licensed and insured commercial
-                cleaning company serving offices, schools, medical facilities, and government
-                buildings. For over a decade we've delivered consistent, hospital-grade results
-                with vetted, uniformed crews and protocols built around your facility — not a
-                generic checklist.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
-                When you partner with Rangers, you get a dedicated account lead, transparent
-                reporting, and a team that treats your space like it's our own.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
+              <p className="text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
+
                 At Rangers Cleaning and Contracting, we take Covid-19 concerns seriously.
               </p>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
