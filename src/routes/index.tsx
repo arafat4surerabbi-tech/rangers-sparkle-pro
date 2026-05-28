@@ -189,26 +189,6 @@ function Index() {
             : "bg-white/80 backdrop-blur-sm"
         }`}
       >
-        {/* Top contact bar */}
-        <div className="bg-[color:var(--primary)] text-white">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2 text-xs lg:px-8">
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-              <a href="tel:18006976455" className="flex items-center gap-1.5 font-semibold hover:text-[#24A2D9]">
-                <Phone className="h-3.5 w-3.5" /> (800) 697-6455
-                <span className="font-normal text-white/70">· 8am–6pm</span>
-              </a>
-              <a href="tel:3175312606" className="flex items-center gap-1.5 hover:text-[#24A2D9]">
-                <Phone className="h-3.5 w-3.5" /> Local: 317-531-2606
-              </a>
-              <a href="mailto:info@rangerscleaningandcontracting.com" className="flex items-center gap-1.5 hover:text-[#24A2D9]">
-                <Mail className="h-3.5 w-3.5" /> info@rangerscleaningandcontracting.com
-              </a>
-            </div>
-            <div className="flex items-center gap-1.5 text-white/80">
-              <MapPin className="h-3.5 w-3.5" /> Serving Indianapolis, IN & Surrounding Areas
-            </div>
-          </div>
-        </div>
 
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a
@@ -594,10 +574,10 @@ function Index() {
 
               <div className="mt-10 space-y-5">
                 {[
-                  { icon: Phone, l: "Phone", v: "(555) 014-2210" },
-                  { icon: Mail, l: "Email", v: "quotes@rangerscleaning.com" },
-                  { icon: MapPin, l: "Address", v: "1420 Industrial Pkwy, Suite 200" },
-                  { icon: Clock, l: "Hours", v: "Mon–Sun · 24/7 Service Available" },
+                  { icon: Phone, l: "Toll-Free", v: "(800) 697-6455", sub: "Available 8am – 6pm", href: "tel:18006976455" },
+                  { icon: Phone, l: "Local Number", v: "317-531-2606", href: "tel:3175312606" },
+                  { icon: Mail, l: "Email", v: "info@rangerscleaningandcontracting.com", href: "mailto:info@rangerscleaningandcontracting.com" },
+                  { icon: MapPin, l: "Serving", v: "Indianapolis, Indiana & Surrounding Areas" },
                 ].map((c) => (
                   <div key={c.l} className="flex items-start gap-4">
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--accent)]">
@@ -607,9 +587,18 @@ function Index() {
                       <div className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">
                         {c.l}
                       </div>
-                      <div className="mt-0.5 font-display text-lg font-semibold text-[color:var(--primary)]">
-                        {c.v}
-                      </div>
+                      {c.href ? (
+                        <a href={c.href} className="mt-0.5 block font-display text-lg font-semibold text-[color:var(--primary)] hover:text-[#24A2D9] break-all">
+                          {c.v}
+                        </a>
+                      ) : (
+                        <div className="mt-0.5 font-display text-lg font-semibold text-[color:var(--primary)]">
+                          {c.v}
+                        </div>
+                      )}
+                      {c.sub && (
+                        <div className="mt-0.5 text-sm text-[color:var(--muted-foreground)]">{c.sub}</div>
+                      )}
                     </div>
                   </div>
                 ))}
