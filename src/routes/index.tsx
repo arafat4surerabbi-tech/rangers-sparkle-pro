@@ -372,6 +372,46 @@ function Index() {
                 When you partner with Rangers, you get a dedicated account lead, transparent
                 reporting, and a team that treats your space like it's our own.
               </p>
+              <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
+                At Rangers Cleaning and Contracting, we take Covid-19 concerns seriously.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
+                We want our clients to know that safety is the priority. Not only do we take
+                precautionary measures to prevent the spread of Covid-19 that are compliant with
+                state guidelines, but we also offer services to help battle the widespread virus,
+                such as deep cleaning and thoroughly disinfecting surfaces, common areas and
+                shared surfaces throughout homes and commercial properties, such as offices. In
+                addition, we follow strict Covid-19 protocol to ensure the safety of our workers
+                and the clients at each job and will wear protective masks if you'd like us to.
+              </p>
+              <p className="mt-6 font-display text-lg font-bold uppercase tracking-wide text-[color:var(--primary)]">
+                A full Range of Cleaning Services Including:
+              </p>
+              <ul className="mt-4 grid grid-cols-1 gap-2 text-base text-[color:var(--muted-foreground)] sm:grid-cols-2 sm:text-lg">
+                {[
+                  "Construction Cleaning",
+                  "Hospitality Cleaning",
+                  "Office Cleaning",
+                  "Janitorial Clients",
+                  "Schools",
+                  "Medical Facilities",
+                  "Government Buildings",
+                  "Gyms",
+                  "And Much More!",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 flex-none rounded-full bg-[color:var(--accent)]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <button
+                onClick={() => scrollTo("#services")}
+                className="mt-6 inline-flex items-center gap-2 rounded-md bg-[color:var(--accent)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-[color:var(--accent-foreground)] shadow-md transition hover:brightness-95"
+              >
+                See Our Services — Click Here Now <ArrowRight className="h-4 w-4" />
+              </button>
+
 
               <div className="mt-8 space-y-4">
                 {[
