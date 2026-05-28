@@ -299,12 +299,6 @@ function Index() {
               <br />
               <span className="text-[#24A2D9]">Janitorial Services</span>
             </h1>
-            <p className="fade-up mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/85 sm:text-lg">
-              Rangers Cleaning and Contracting offers convenient janitorial services designed to save clients time while helping them maintain their properties to keep them in the best condition.
-            </p>
-            <p className="fade-up mt-4 font-script text-3xl text-[color:var(--accent)] sm:text-4xl">
-              Fully Licensed and Insured
-            </p>
             <div className="fade-up mt-8 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => scrollTo("#services")}
@@ -349,6 +343,14 @@ function Index() {
       <section id="about" className="relative bg-white py-24 sm:py-32">
         <div className="absolute inset-0 -z-10 bg-grid opacity-50" />
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="fade-up mx-auto mb-16 max-w-4xl text-center">
+            <p className="font-script text-4xl text-[color:var(--accent)] sm:text-5xl">
+              Fully Licensed and Insured
+            </p>
+            <p className="mt-6 font-sans text-lg leading-relaxed text-[color:var(--foreground)] sm:text-xl">
+              Rangers Cleaning and Contracting offers convenient janitorial services designed to save clients time while helping them maintain their properties to keep them in the best condition.
+            </p>
+          </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div className="fade-up">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--accent)]">
