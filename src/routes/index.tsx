@@ -192,7 +192,7 @@ function Index() {
             }}
             className="flex items-center"
           >
-            <img src={logoUrl} alt="Rangers Cleaning and Contracting" className="h-14 w-auto sm:h-16" />
+            <img src={logoUrl} alt="Rangers Cleaning and Contracting" className="h-20 w-auto sm:h-24 lg:h-28" />
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex">
