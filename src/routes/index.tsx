@@ -353,26 +353,8 @@ function Index() {
           </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div className="fade-up">
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--accent)]">
-                Who We Are
-              </span>
-              <h2 className="mt-3 font-display text-4xl font-bold uppercase leading-tight text-[color:var(--primary)] sm:text-5xl">
-                Built on trust.
-                <br />
-                Measured in spotless results.
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
-                Rangers Cleaning &amp; Contracting is a fully licensed and insured commercial
-                cleaning company serving offices, schools, medical facilities, and government
-                buildings. For over a decade we've delivered consistent, hospital-grade results
-                with vetted, uniformed crews and protocols built around your facility — not a
-                generic checklist.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
-                When you partner with Rangers, you get a dedicated account lead, transparent
-                reporting, and a team that treats your space like it's our own.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
+              <p className="text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
+
                 At Rangers Cleaning and Contracting, we take Covid-19 concerns seriously.
               </p>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted-foreground)] sm:text-lg">
@@ -411,28 +393,8 @@ function Index() {
               >
                 See Our Services — Click Here Now <ArrowRight className="h-4 w-4" />
               </button>
-
-
-              <div className="mt-8 space-y-4">
-                {[
-                  { icon: BadgeCheck, t: "Licensed & Insured", d: "Bonded, background-checked, and fully covered on every job." },
-                  { icon: Leaf, t: "Eco-Friendly Products", d: "Green-Seal certified solutions safe for staff, students, and patients." },
-                  { icon: Clock, t: "24/7 Availability", d: "Day porter, overnight, weekends — we work around your operations." },
-                ].map((h) => (
-                  <div key={h.t} className="flex gap-4">
-                    <div className="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-md bg-[color:var(--accent)] text-[color:var(--primary)]">
-                      <h.icon className="h-5 w-5" strokeWidth={2.5} />
-                    </div>
-                    <div>
-                      <div className="font-display text-lg font-bold uppercase tracking-wide text-[color:var(--primary)]">
-                        {h.t}
-                      </div>
-                      <div className="text-sm text-[color:var(--muted-foreground)]">{h.d}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
+
 
             <div className="fade-up relative">
               <div className="absolute -inset-4 -z-10 rounded-2xl bg-[color:var(--accent)]/30" />
