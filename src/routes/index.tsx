@@ -413,10 +413,7 @@ function Index() {
                   "{r.q}"
                 </blockquote>
                 <figcaption className="mt-5 flex items-center justify-between border-t border-[color:var(--border)] pt-4">
-                  <div className="flex items-center gap-2">
-                    <img src={about1} alt="" className="h-8 w-8 rounded-full object-cover" />
-                    <span className="text-sm font-semibold text-[color:var(--primary)]">{r.n}</span>
-                  </div>
+                  <span className="text-sm font-semibold text-[color:var(--primary)]">— {r.n}</span>
                   <div className="flex items-center gap-1 text-xs text-[color:var(--muted-foreground)]">
                     <Star className="h-3.5 w-3.5 fill-[#F5B935] text-[#F5B935]" /> 5.0
                   </div>
