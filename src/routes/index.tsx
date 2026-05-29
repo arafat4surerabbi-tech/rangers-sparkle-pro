@@ -388,7 +388,7 @@ function Index() {
         <footer className="relative mt-4 overflow-hidden rounded-3xl bg-[#0A1628] p-7 text-white sm:p-10">
           <div className="grid gap-10 lg:grid-cols-4">
             <div>
-              <div className="font-display text-2xl font-semibold">Rangers</div>
+              <img src={logoUrl} alt="Rangers Cleaning & Contracting" className="h-12 w-auto" />
               <p className="mt-3 max-w-xs text-sm text-white/70">
                 Crafting meaningful cleaning that blends reliability, care, and lasting freshness.
               </p>
