@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import logoUrl from "@/assets/logo.png";
 import {
   Menu,
@@ -90,7 +90,9 @@ function useFadeUp() {
 
 function Index() {
   useFadeUp();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const bookNow = () => navigate({ to: "/onboarding" });
   const scrollTo = (href: string) => {
     setOpen(false);
     const el = document.querySelector(href);
@@ -109,9 +111,6 @@ function Index() {
               className="flex items-center gap-2"
             >
               <img src={logoUrl} alt="Rangers Cleaning" className="h-10 w-auto" />
-              <span className="hidden font-display text-lg font-bold uppercase tracking-wide text-white sm:block">
-                Rangers
-              </span>
             </a>
 
             <nav className="hidden items-center gap-8 lg:flex">
@@ -173,7 +172,7 @@ function Index() {
                 </p>
                 <div className="fade-up mt-6 flex flex-wrap items-center gap-3">
                   <button
-                    onClick={() => scrollTo("#contact")}
+                    onClick={bookNow}
                     className="rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110"
                   >
                     Book Now
@@ -284,7 +283,7 @@ function Index() {
                   <h3 className="font-display text-xl font-semibold">{s.name}</h3>
                   <p className="mt-1 line-clamp-2 text-sm text-white/85">{s.desc}</p>
                   <button
-                    onClick={() => scrollTo("#contact")}
+                    onClick={bookNow}
                     className="mt-4 rounded-full bg-[#2CADE2] px-4 py-2 text-xs font-semibold text-white shadow transition hover:brightness-110"
                   >
                     Book Now
@@ -378,7 +377,7 @@ function Index() {
                 Book your trusted cleaning service today and enjoy the comfort of a spotless,
                 stress-free space — because every home deserves to feel fresh.
               </p>
-              <button className="fade-up mt-5 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110">
+              <button onClick={bookNow} className="fade-up mt-5 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110">
                 Book a Cleaning Now
               </button>
             </div>
@@ -389,7 +388,7 @@ function Index() {
         <footer className="relative mt-4 overflow-hidden rounded-3xl bg-[#0A1628] p-7 text-white sm:p-10">
           <div className="grid gap-10 lg:grid-cols-4">
             <div>
-              <div className="font-display text-2xl font-semibold">Rangers</div>
+              <img src={logoUrl} alt="Rangers Cleaning & Contracting" className="h-12 w-auto" />
               <p className="mt-3 max-w-xs text-sm text-white/70">
                 Crafting meaningful cleaning that blends reliability, care, and lasting freshness.
               </p>
@@ -417,9 +416,6 @@ function Index() {
             ))}
           </div>
 
-          <div className="pointer-events-none mt-12 select-none text-center font-display text-[18vw] font-bold leading-none tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.12)] sm:text-[14vw]">
-            RANGERS
-          </div>
 
           <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-5 text-xs text-white/60 sm:flex-row">
             <div>© 2025 Rangers Cleaning &amp; Contracting. All rights reserved.</div>
