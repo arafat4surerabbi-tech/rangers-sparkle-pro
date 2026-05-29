@@ -111,9 +111,6 @@ function Index() {
               className="flex items-center gap-2"
             >
               <img src={logoUrl} alt="Rangers Cleaning" className="h-10 w-auto" />
-              <span className="hidden font-display text-lg font-bold uppercase tracking-wide text-white sm:block">
-                Rangers
-              </span>
             </a>
 
             <nav className="hidden items-center gap-8 lg:flex">
