@@ -16,6 +16,9 @@ import hero2 from "@/assets/hero-2.jpg";
 import about1 from "@/assets/about-1.png";
 import about2 from "@/assets/about-2.png";
 import about3 from "@/assets/about-3.png";
+import serviceHome from "@/assets/service-home.jpg";
+import serviceOffice from "@/assets/service-office.jpg";
+import serviceDeep from "@/assets/service-deep.jpg";
 
 const HERO_SLIDES = [heroImg, hero2];
 
@@ -43,19 +46,19 @@ const NAV = [
 
 const SERVICES = [
   {
-    img: about1,
+    img: serviceHome,
     name: "Home Cleaning",
-    desc: "Keep your living space fresh and organized with regular or one-time cleaning tailored to your schedule.",
+    desc: "Keep your living space fresh and organized with regular or one-time cleaning tailored to your schedule. Our friendly team handles dusting, vacuuming, mopping, kitchen and bathroom care — leaving every room sparkling and ready to enjoy.",
   },
   {
-    img: about2,
+    img: serviceOffice,
     name: "Office Cleaning",
-    desc: "Maintain a clean, productive workspace that boosts focus and leaves a lasting impression on clients.",
+    desc: "Maintain a clean, productive workspace that boosts focus and leaves a lasting impression on clients. From desks and meeting rooms to restrooms and common areas, we keep your office spotless on a schedule that fits your business.",
   },
   {
-    img: about3,
+    img: serviceDeep,
     name: "Deep Cleaning",
-    desc: "Top-to-bottom disinfection and detail work that brings every surface back to like-new condition.",
+    desc: "Top-to-bottom disinfection and detail work that brings every surface back to like-new condition. Perfect for seasonal resets, move-ins, or post-renovation — we reach the corners regular cleaning misses for a truly fresh space.",
   },
 ];
 
@@ -296,19 +299,26 @@ function Index() {
             or a busy office. Our goal is to deliver spotless results with care, reliability, and consistency.
           </p>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {SERVICES.map((s) => (
-              <div key={s.name} className="fade-up group relative overflow-hidden rounded-2xl">
-                <img src={s.img} alt={s.name} className="h-72 w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                  <h3 className="font-display text-xl font-semibold">{s.name}</h3>
-                  <p className="mt-1 line-clamp-2 text-sm text-white/85">{s.desc}</p>
+          <div className="mt-8 space-y-5">
+            {SERVICES.map((s, i) => (
+              <div
+                key={s.name}
+                className={`fade-up grid gap-5 overflow-hidden rounded-2xl md:grid-cols-2 ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}
+              >
+                <div className="overflow-hidden rounded-2xl">
+                  <img src={s.img} alt={s.name} className="h-72 w-full object-cover md:h-full" />
+                </div>
+                <div className="flex flex-col justify-center rounded-2xl bg-[#F6F7F8] p-6 sm:p-8">
+                  <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-medium text-[color:var(--primary)]">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2CADE2]" /> 0{i + 1}
+                  </div>
+                  <h3 className="mt-3 font-display text-2xl font-semibold text-[color:var(--primary)] sm:text-3xl">{s.name}</h3>
+                  <p className="mt-3 text-[color:var(--muted-foreground)]">{s.desc}</p>
                   <button
                     onClick={bookNow}
-                    className="mt-4 rounded-full bg-[#2CADE2] px-4 py-2 text-xs font-semibold text-white shadow transition hover:brightness-110"
+                    className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-[#2CADE2] px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:brightness-110"
                   >
-                    Book Now
+                    Book Now <ArrowRight className="h-4 w-4" />
                   </button>
                 </div>
               </div>
