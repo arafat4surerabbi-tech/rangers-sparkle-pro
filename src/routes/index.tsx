@@ -476,23 +476,20 @@ function Index() {
               Fill out a few quick details and we'll confirm your booking shortly.
             </p>
 
-            <form
-              onSubmit={(e) => { e.preventDefault(); bookNow(); }}
-              className="mt-6 grid gap-4 sm:grid-cols-2"
-            >
-              <input required placeholder="Full name" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
-              <input required type="email" placeholder="Email address" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
-              <input required type="tel" placeholder="Phone number" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
-              <select required defaultValue="" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]">
+            <form onSubmit={handleSubmit} className="mt-6 grid gap-4 sm:grid-cols-2">
+              <input name="full_name" required placeholder="Full name" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
+              <input name="email" required type="email" placeholder="Email address" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <input name="phone" required type="tel" placeholder="Phone number" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <select name="service" required defaultValue="" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]">
                 <option value="" disabled>Select service</option>
                 <option>Home Cleaning</option>
                 <option>Office Cleaning</option>
                 <option>Deep Cleaning</option>
               </select>
-              <input required type="date" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
-              <textarea placeholder="Tell us about your space..." rows={3} className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
-              <button type="submit" className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110">
-                Book a Cleaning Now <ArrowRight className="h-4 w-4" />
+              <input name="preferred_date" required type="date" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <textarea name="message" placeholder="Tell us about your space..." rows={3} className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
+              <button type="submit" disabled={submitting} className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-60">
+                {submitting ? "Submitting..." : <>Book a Cleaning Now <ArrowRight className="h-4 w-4" /></>}
               </button>
             </form>
           </div>
