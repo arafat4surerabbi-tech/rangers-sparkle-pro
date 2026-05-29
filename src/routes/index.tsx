@@ -32,10 +32,10 @@ export const Route = createFileRoute("/")({
 
 const NAV = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Service", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Testimonial", href: "#reviews" },
+  { label: "About Us", href: "#about" },
+  { label: "Cleaning Services", href: "#services" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 const SERVICES = [
