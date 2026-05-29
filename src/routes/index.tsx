@@ -73,9 +73,9 @@ const STEPS = [
 ];
 
 const REVIEWS = [
-  { q: "Nobody has ever cleaned my place with such attention to detail. The team was friendly, on time, and left my home sparkling!", n: "Falah Maulana" },
-  { q: "It's the first time my apartment has felt this fresh. Rangers really exceeded my expectations.", n: "Hanifa Maulana" },
-  { q: "They made my move-out cleaning effortless. Everything looked brand new again — totally worth it.", n: "Hanifa Maulana" },
+  { q: "Nobody has ever cleaned my place with such attention to detail. The team was friendly, on time, and left my home sparkling!", n: "Sarah Mitchell" },
+  { q: "It's the first time my apartment has felt this fresh. Rangers really exceeded my expectations.", n: "James Carter" },
+  { q: "They made my move-out cleaning effortless. Everything looked brand new again — totally worth it.", n: "Emily Rodriguez" },
 ];
 
 function useFadeUp() {
