@@ -16,6 +16,9 @@ import hero2 from "@/assets/hero-2.jpg";
 import about1 from "@/assets/about-1.png";
 import about2 from "@/assets/about-2.png";
 import about3 from "@/assets/about-3.png";
+import serviceHome from "@/assets/service-home.jpg";
+import serviceOffice from "@/assets/service-office.jpg";
+import serviceDeep from "@/assets/service-deep.jpg";
 
 const HERO_SLIDES = [heroImg, hero2];
 
@@ -43,19 +46,19 @@ const NAV = [
 
 const SERVICES = [
   {
-    img: about1,
+    img: serviceHome,
     name: "Home Cleaning",
-    desc: "Keep your living space fresh and organized with regular or one-time cleaning tailored to your schedule.",
+    desc: "Keep your living space fresh and organized with regular or one-time cleaning tailored to your schedule. Our friendly team handles dusting, vacuuming, mopping, kitchen and bathroom care — leaving every room sparkling and ready to enjoy.",
   },
   {
-    img: about2,
+    img: serviceOffice,
     name: "Office Cleaning",
-    desc: "Maintain a clean, productive workspace that boosts focus and leaves a lasting impression on clients.",
+    desc: "Maintain a clean, productive workspace that boosts focus and leaves a lasting impression on clients. From desks and meeting rooms to restrooms and common areas, we keep your office spotless on a schedule that fits your business.",
   },
   {
-    img: about3,
+    img: serviceDeep,
     name: "Deep Cleaning",
-    desc: "Top-to-bottom disinfection and detail work that brings every surface back to like-new condition.",
+    desc: "Top-to-bottom disinfection and detail work that brings every surface back to like-new condition. Perfect for seasonal resets, move-ins, or post-renovation — we reach the corners regular cleaning misses for a truly fresh space.",
   },
 ];
 
