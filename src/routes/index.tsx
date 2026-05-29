@@ -416,9 +416,6 @@ function Index() {
             ))}
           </div>
 
-          <div className="pointer-events-none mt-12 select-none text-center font-display text-[18vw] font-bold leading-none tracking-tighter text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.12)] sm:text-[14vw]">
-            RANGERS
-          </div>
 
           <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-5 text-xs text-white/60 sm:flex-row">
             <div>© 2025 Rangers Cleaning &amp; Contracting. All rights reserved.</div>
