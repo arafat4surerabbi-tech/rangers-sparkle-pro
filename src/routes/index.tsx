@@ -102,15 +102,38 @@ function Index() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [slide, setSlide] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
   useEffect(() => {
     const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 4000);
     return () => clearInterval(t);
   }, []);
-  const bookNow = () => navigate({ to: "/onboarding" });
   const scrollTo = (href: string) => {
     setOpen(false);
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const bookNow = () => scrollTo("#contact");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    setSubmitting(true);
+    const { error } = await supabase.from("bookings").insert({
+      full_name: String(fd.get("full_name") || ""),
+      email: String(fd.get("email") || ""),
+      phone: String(fd.get("phone") || ""),
+      service: String(fd.get("service") || ""),
+      preferred_date: String(fd.get("preferred_date") || ""),
+      message: String(fd.get("message") || ""),
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not submit booking. Please try again.");
+      return;
+    }
+    toast.success("Booking received! We'll be in touch shortly.");
+    form.reset();
   };
 
   return (
