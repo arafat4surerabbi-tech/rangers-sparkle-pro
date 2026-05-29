@@ -396,23 +396,74 @@ function Index() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section id="contact" className="relative mt-4 overflow-hidden rounded-3xl">
-          <img src={heroImg} alt="" className="h-[380px] w-full object-cover sm:h-[440px]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="absolute inset-0 flex items-end p-6 sm:p-10 lg:p-14">
-            <div className="max-w-xl text-white">
-              <h2 className="fade-up font-display text-3xl font-semibold leading-tight sm:text-5xl">
-                Let's Bring Freshness<br />Back to Your Home
-              </h2>
-              <p className="fade-up mt-3 text-white/85">
-                Book your trusted cleaning service today and enjoy the comfort of a spotless,
-                stress-free space — because every home deserves to feel fresh.
-              </p>
-              <button onClick={bookNow} className="fade-up mt-5 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110">
-                Book a Cleaning Now
-              </button>
+        {/* CONTACT + BOOKING */}
+        <section id="contact" className="mt-4 grid gap-4 lg:grid-cols-2">
+          {/* Contact info */}
+          <div className="fade-up relative overflow-hidden rounded-3xl bg-[#0A1628] p-7 text-white sm:p-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2CADE2]" /> Contact Us
             </div>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-4xl">
+              Let's Bring Freshness<br />Back to Your Home
+            </h2>
+            <p className="mt-3 text-white/80">
+              Reach out anytime — our team is ready to answer questions and schedule the perfect cleaning for your space.
+            </p>
+
+            <div className="mt-8 space-y-5">
+              {[
+                { l: "Call us", v: "+1 (555) 123-4567" },
+                { l: "Email", v: "hello@rangerscleaning.com" },
+                { l: "Address", v: "123 Maple Street, Suite 200" },
+                { l: "Hours", v: "Mon – Sat · 8:00 AM – 7:00 PM" },
+              ].map((c) => (
+                <div key={c.l} className="flex items-start justify-between border-t border-white/10 pt-4">
+                  <span className="text-sm text-white/60">{c.l}</span>
+                  <span className="text-right text-sm font-medium text-white">{c.v}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex gap-3">
+              {[Facebook, Twitter, Instagram].map((Icon, i) => (
+                <a key={i} href="#" aria-label="social" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:bg-white hover:text-[#0A1628]">
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Booking form */}
+          <div className="fade-up rounded-3xl bg-white p-7 sm:p-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#EDEEF0] px-3 py-1 text-xs font-medium text-[color:var(--primary)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2CADE2]" /> Book Now
+            </div>
+            <h2 className="mt-4 font-display text-3xl font-semibold text-[color:var(--primary)] sm:text-4xl">
+              Schedule Your Cleaning
+            </h2>
+            <p className="mt-3 text-[color:var(--muted-foreground)]">
+              Fill out a few quick details and we'll confirm your booking shortly.
+            </p>
+
+            <form
+              onSubmit={(e) => { e.preventDefault(); bookNow(); }}
+              className="mt-6 grid gap-4 sm:grid-cols-2"
+            >
+              <input required placeholder="Full name" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
+              <input required type="email" placeholder="Email address" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <input required type="tel" placeholder="Phone number" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <select required defaultValue="" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]">
+                <option value="" disabled>Select service</option>
+                <option>Home Cleaning</option>
+                <option>Office Cleaning</option>
+                <option>Deep Cleaning</option>
+              </select>
+              <input required type="date" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <textarea placeholder="Tell us about your space..." rows={3} className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
+              <button type="submit" className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110">
+                Book a Cleaning Now <ArrowRight className="h-4 w-4" />
+              </button>
+            </form>
           </div>
         </section>
 
