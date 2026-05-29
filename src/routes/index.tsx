@@ -19,6 +19,7 @@ import about3 from "@/assets/about-3.png";
 import serviceHome from "@/assets/service-home.jpg";
 import serviceOffice from "@/assets/service-office.jpg";
 import serviceDeep from "@/assets/service-deep.jpg";
+import processBg from "@/assets/process-bg.jpg";
 
 const HERO_SLIDES = [heroImg, hero2];
 
@@ -327,27 +328,31 @@ function Index() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section id="pricing" className="mt-4 rounded-3xl bg-[#2CADE2] p-7 text-white sm:p-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-white" /> How It Works
-          </div>
-          <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-            Simple Steps to a Cleaner Home
-          </h2>
-          <p className="mt-3 max-w-xl text-white/85">
-            Our cleaning process is simple, quick, and reliable — from booking to enjoying your spotless home.
-          </p>
+        <section id="pricing" className="relative mt-4 overflow-hidden rounded-3xl text-white">
+          <img src={processBg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-[#0A1628]/75 backdrop-blur-sm" />
+          <div className="relative p-7 sm:p-12">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#2CADE2]" /> How It Works
+            </div>
+            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
+              Simple Steps to a Cleaner Home
+            </h2>
+            <p className="mt-3 max-w-xl text-white/85">
+              Our cleaning process is simple, quick, and reliable — from booking to enjoying your spotless home.
+            </p>
 
-          <div className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
-            {STEPS.map((s) => (
-              <div key={s.n} className="fade-up flex gap-5 border-t border-white/25 pt-5">
-                <div className="font-display text-2xl font-semibold text-white/90">{s.n}</div>
-                <div>
-                  <h3 className="font-display text-lg font-semibold">{s.t}</h3>
-                  <p className="mt-1 text-sm text-white/85">{s.d}</p>
+            <div className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
+              {STEPS.map((s) => (
+                <div key={s.n} className="fade-up flex gap-5 border-t border-white/25 pt-5">
+                  <div className="font-display text-2xl font-semibold text-white/90">{s.n}</div>
+                  <div>
+                    <h3 className="font-display text-lg font-semibold">{s.t}</h3>
+                    <p className="mt-1 text-sm text-white/85">{s.d}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
@@ -412,10 +417,11 @@ function Index() {
 
             <div className="mt-8 space-y-5">
               {[
-                { l: "Call us", v: "+1 (555) 123-4567" },
-                { l: "Email", v: "hello@rangerscleaning.com" },
-                { l: "Address", v: "123 Maple Street, Suite 200" },
-                { l: "Hours", v: "Mon – Sat · 8:00 AM – 7:00 PM" },
+                { l: "Toll Free", v: "(800) 697-6455" },
+                { l: "Local", v: "317-531-2606" },
+                { l: "Hours", v: "Available 8am – 6pm" },
+                { l: "Email", v: "info@rangerscleaningandcontracting.com" },
+                { l: "Service Area", v: "Indianapolis, IN & Surrounding Areas" },
               ].map((c) => (
                 <div key={c.l} className="flex items-start justify-between border-t border-white/10 pt-4">
                   <span className="text-sm text-white/60">{c.l}</span>
