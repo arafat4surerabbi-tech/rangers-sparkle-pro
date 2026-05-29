@@ -335,10 +335,7 @@ function Index() {
                   <img src={s.img} alt={s.name} className="h-72 w-full object-cover md:h-full" />
                 </div>
                 <div className="flex flex-col justify-center rounded-2xl bg-[#F6F7F8] p-6 sm:p-8">
-                  <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-medium text-[color:var(--primary)]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#2CADE2]" /> 0{i + 1}
-                  </div>
-                  <h3 className="mt-3 font-display text-2xl font-semibold text-[color:var(--primary)] sm:text-3xl">{s.name}</h3>
+                  <h3 className="font-display text-2xl font-semibold text-[color:var(--primary)] sm:text-3xl">{s.name}</h3>
                   <p className="mt-3 text-[color:var(--muted-foreground)]">{s.desc}</p>
                   <button
                     onClick={bookNow}
