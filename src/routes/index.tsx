@@ -176,6 +176,11 @@ function Index() {
               />
             ))}
           </div>
+          <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+            {HERO_SLIDES.map((_, i) => (
+              <span key={i} className={`h-2 rounded-full transition-all ${i === slide ? "w-6 bg-white" : "w-2 bg-white/50"}`} />
+            ))}
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-end p-6 sm:p-10 lg:p-14">
             <div className="w-full">
