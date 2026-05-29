@@ -283,7 +283,7 @@ function Index() {
                   <h3 className="font-display text-xl font-semibold">{s.name}</h3>
                   <p className="mt-1 line-clamp-2 text-sm text-white/85">{s.desc}</p>
                   <button
-                    onClick={() => scrollTo("#contact")}
+                    onClick={bookNow}
                     className="mt-4 rounded-full bg-[#2CADE2] px-4 py-2 text-xs font-semibold text-white shadow transition hover:brightness-110"
                   >
                     Book Now
