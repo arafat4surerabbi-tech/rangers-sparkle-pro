@@ -166,7 +166,16 @@ function Index() {
 
         {/* HERO */}
         <section className="relative mt-4 overflow-hidden rounded-3xl">
-          <img src={heroImg} alt="Rangers cleaning crew" className="h-[480px] w-full object-cover sm:h-[560px]" />
+          <div className="relative h-[480px] w-full sm:h-[560px]">
+            {HERO_SLIDES.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt="Rangers cleaning crew"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+              />
+            ))}
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-end p-6 sm:p-10 lg:p-14">
             <div className="w-full">
