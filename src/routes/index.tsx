@@ -99,7 +99,7 @@ function useFadeUp() {
 
 function Index() {
   useFadeUp();
-  const navigate = useNavigate();
+  
   const [open, setOpen] = useState(false);
   const [slide, setSlide] = useState(0);
   const [submitting, setSubmitting] = useState(false);
