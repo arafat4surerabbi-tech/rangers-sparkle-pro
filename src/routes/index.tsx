@@ -95,6 +95,11 @@ function Index() {
   useFadeUp();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
   const bookNow = () => navigate({ to: "/onboarding" });
   const scrollTo = (href: string) => {
     setOpen(false);
