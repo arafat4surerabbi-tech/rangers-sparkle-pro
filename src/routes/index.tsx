@@ -1,5 +1,7 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import logoUrl from "@/assets/logo.png";
 import {
   Menu,
@@ -97,18 +99,41 @@ function useFadeUp() {
 
 function Index() {
   useFadeUp();
-  const navigate = useNavigate();
+  
   const [open, setOpen] = useState(false);
   const [slide, setSlide] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
   useEffect(() => {
     const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 4000);
     return () => clearInterval(t);
   }, []);
-  const bookNow = () => navigate({ to: "/onboarding" });
   const scrollTo = (href: string) => {
     setOpen(false);
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const bookNow = () => scrollTo("#contact");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    setSubmitting(true);
+    const { error } = await supabase.from("bookings").insert({
+      full_name: String(fd.get("full_name") || ""),
+      email: String(fd.get("email") || ""),
+      phone: String(fd.get("phone") || ""),
+      service: String(fd.get("service") || ""),
+      preferred_date: String(fd.get("preferred_date") || ""),
+      message: String(fd.get("message") || ""),
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not submit booking. Please try again.");
+      return;
+    }
+    toast.success("Booking received! We'll be in touch shortly.");
+    form.reset();
   };
 
   return (
@@ -451,23 +476,20 @@ function Index() {
               Fill out a few quick details and we'll confirm your booking shortly.
             </p>
 
-            <form
-              onSubmit={(e) => { e.preventDefault(); bookNow(); }}
-              className="mt-6 grid gap-4 sm:grid-cols-2"
-            >
-              <input required placeholder="Full name" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
-              <input required type="email" placeholder="Email address" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
-              <input required type="tel" placeholder="Phone number" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
-              <select required defaultValue="" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]">
+            <form onSubmit={handleSubmit} className="mt-6 grid gap-4 sm:grid-cols-2">
+              <input name="full_name" required placeholder="Full name" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
+              <input name="email" required type="email" placeholder="Email address" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <input name="phone" required type="tel" placeholder="Phone number" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <select name="service" required defaultValue="" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]">
                 <option value="" disabled>Select service</option>
                 <option>Home Cleaning</option>
                 <option>Office Cleaning</option>
                 <option>Deep Cleaning</option>
               </select>
-              <input required type="date" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
-              <textarea placeholder="Tell us about your space..." rows={3} className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
-              <button type="submit" className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110">
-                Book a Cleaning Now <ArrowRight className="h-4 w-4" />
+              <input name="preferred_date" required type="date" className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2]" />
+              <textarea name="message" placeholder="Tell us about your space..." rows={3} className="rounded-xl border border-[color:var(--border)] bg-[#F6F7F8] px-4 py-3 text-sm outline-none focus:border-[#2CADE2] sm:col-span-2" />
+              <button type="submit" disabled={submitting} className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-60">
+                {submitting ? "Submitting..." : <>Book a Cleaning Now <ArrowRight className="h-4 w-4" /></>}
               </button>
             </form>
           </div>
