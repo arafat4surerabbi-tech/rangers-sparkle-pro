@@ -90,7 +90,9 @@ function useFadeUp() {
 
 function Index() {
   useFadeUp();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const bookNow = () => navigate({ to: "/onboarding" });
   const scrollTo = (href: string) => {
     setOpen(false);
     const el = document.querySelector(href);
