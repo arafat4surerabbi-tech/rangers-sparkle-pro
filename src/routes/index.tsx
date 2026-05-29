@@ -172,7 +172,7 @@ function Index() {
                 </p>
                 <div className="fade-up mt-6 flex flex-wrap items-center gap-3">
                   <button
-                    onClick={() => scrollTo("#contact")}
+                    onClick={bookNow}
                     className="rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110"
                   >
                     Book Now
