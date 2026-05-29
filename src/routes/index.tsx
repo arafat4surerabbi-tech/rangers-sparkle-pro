@@ -12,9 +12,12 @@ import {
   Twitter,
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
+import hero2 from "@/assets/hero-2.jpg";
 import about1 from "@/assets/about-1.png";
 import about2 from "@/assets/about-2.png";
 import about3 from "@/assets/about-3.png";
+
+const HERO_SLIDES = [heroImg, hero2];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -92,6 +95,11 @@ function Index() {
   useFadeUp();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
   const bookNow = () => navigate({ to: "/onboarding" });
   const scrollTo = (href: string) => {
     setOpen(false);
@@ -158,7 +166,21 @@ function Index() {
 
         {/* HERO */}
         <section className="relative mt-4 overflow-hidden rounded-3xl">
-          <img src={heroImg} alt="Rangers cleaning crew" className="h-[480px] w-full object-cover sm:h-[560px]" />
+          <div className="relative h-[480px] w-full sm:h-[560px]">
+            {HERO_SLIDES.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt="Rangers cleaning crew"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+              />
+            ))}
+          </div>
+          <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+            {HERO_SLIDES.map((_, i) => (
+              <span key={i} className={`h-2 rounded-full transition-all ${i === slide ? "w-6 bg-white" : "w-2 bg-white/50"}`} />
+            ))}
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-end p-6 sm:p-10 lg:p-14">
             <div className="w-full">
