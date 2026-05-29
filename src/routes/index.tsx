@@ -377,7 +377,7 @@ function Index() {
                 Book your trusted cleaning service today and enjoy the comfort of a spotless,
                 stress-free space — because every home deserves to feel fresh.
               </p>
-              <button className="fade-up mt-5 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110">
+              <button onClick={bookNow} className="fade-up mt-5 rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110">
                 Book a Cleaning Now
               </button>
             </div>
