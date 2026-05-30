@@ -150,16 +150,38 @@
     border-color: var(--color-border);
   }
 
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-feature-settings: "ss01", "kern", "liga", "calt";
+    letter-spacing: -0.005em;
+    line-height: 1.6;
+    text-decoration: none;
+    text-transform: none;
   }
 
   h1, h2, h3, h4, h5, h6, .font-display {
     font-family: var(--font-display);
-    letter-spacing: 0.01em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    font-optical-sizing: auto;
+    font-feature-settings: "ss01", "kern", "liga", "calt";
   }
+
+  h1 { font-weight: 700; letter-spacing: -0.03em; }
+  h2 { font-weight: 600; }
+  h3, h4 { font-weight: 600; }
 }
 
 /* Grid texture */
