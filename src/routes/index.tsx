@@ -215,7 +215,7 @@ function Index() {
             <div className="w-full">
               <div className="max-w-xl text-white">
                 <h1 className="fade-up font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                  Custom commercial<br />cleaning services
+                  Creating Cleaner, Healthier Business Environments.
                 </h1>
                 <p className="fade-up mt-4 text-base text-white/85 sm:text-lg">
                   Enjoy a spotless space with our trusted cleaning professionals.<br />
