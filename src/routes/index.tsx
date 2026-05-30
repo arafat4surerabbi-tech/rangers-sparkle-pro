@@ -140,22 +140,22 @@ function Index() {
     <div id="home" className="min-h-screen bg-[#EDEEF0] text-[color:var(--foreground)]">
       <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
         {/* HEADER */}
-        <header className="rounded-2xl bg-[#0A1628] px-4 py-3 sm:px-6">
-          <div className="flex items-center justify-between">
+        <header className="rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-black/5 sm:px-4">
+          <div className="flex items-center justify-between gap-3">
             <a
               href="#home"
               onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
-              className="flex items-center gap-2"
+              className="flex shrink-0 items-center gap-2 pl-1"
             >
-              <img src={logoUrl} alt="Rangers Cleaning" className="h-10 w-auto" />
+              <img src={logoUrl} alt="Rangers Cleaning" className="h-14 w-auto sm:h-16" />
             </a>
 
-            <nav className="hidden items-center gap-8 lg:flex">
+            <nav className="hidden items-center gap-2 lg:flex">
               {NAV.map((l) => (
                 <button
                   key={l.label}
                   onClick={() => scrollTo(l.href)}
-                  className="text-sm font-medium text-white/80 transition hover:text-white"
+                  className="rounded-full px-5 py-2.5 text-sm font-medium text-[#0A1628] ring-1 ring-black/10 transition hover:bg-[#0A1628] hover:text-white hover:ring-transparent"
                 >
                   {l.label}
                 </button>
@@ -165,26 +165,26 @@ function Index() {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => scrollTo("#contact")}
-                className="hidden rounded-full bg-[#2CADE2] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 sm:inline-flex"
+                className="hidden rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 sm:inline-flex"
               >
                 Contact Us
               </button>
               <button
-                className="rounded-md p-2 text-white lg:hidden"
+                className="rounded-full p-2.5 text-[#0A1628] ring-1 ring-black/10 lg:hidden"
                 onClick={() => setOpen((v) => !v)}
                 aria-label="Toggle menu"
               >
-                {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>
             </div>
           </div>
           {open && (
-            <div className="mt-3 space-y-1 border-t border-white/10 pt-3 lg:hidden">
+            <div className="mt-3 space-y-1 border-t border-black/10 pt-3 lg:hidden">
               {NAV.map((l) => (
                 <button
                   key={l.label}
                   onClick={() => scrollTo(l.href)}
-                  className="block w-full rounded-md px-3 py-2 text-left text-sm font-medium text-white/85 hover:bg-white/10"
+                  className="block w-full rounded-md px-3 py-2 text-left text-sm font-medium text-[#0A1628] hover:bg-black/5"
                 >
                   {l.label}
                 </button>
