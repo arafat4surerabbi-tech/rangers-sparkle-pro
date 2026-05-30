@@ -194,7 +194,7 @@ function Index() {
         </header>
 
         {/* HERO */}
-        <section className="relative mt-4 overflow-hidden rounded-3xl">
+        <section className="relative mt-4 overflow-hidden">
           <div className="relative h-[480px] w-full sm:h-[560px]">
             {HERO_SLIDES.map((src, i) => (
               <img
@@ -226,7 +226,7 @@ function Index() {
                     onClick={bookNow}
                     className="rounded-full bg-[#2CADE2] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:brightness-110"
                   >
-                    Book Now
+                    BOOK NOW
                   </button>
                   <button
                     onClick={() => scrollTo("#services")}
