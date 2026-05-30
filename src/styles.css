@@ -104,10 +104,10 @@
   --sidebar-accent-foreground: oklch(0.21 0.045 258);
   --sidebar-border: oklch(0.91 0.012 250);
   --sidebar-ring: oklch(0.83 0.165 88);
-  --font-display: "Anek Bangla", system-ui, sans-serif;
-  --font-body: "Anek Bangla", system-ui, sans-serif;
+  --font-display: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-script: "Great Vibes", cursive;
-  --font-accent: "Montserrat", system-ui, sans-serif;
+  --font-accent: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .dark {
