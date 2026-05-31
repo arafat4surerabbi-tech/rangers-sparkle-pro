@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "rangerscleaning-1draft",
+  "name": "rangerscleaning-1-draft",
   "compatibility_date": "2026-05-28",
   "compatibility_flags": ["nodejs_compat"],
   "main": "dist/server/server.js",
