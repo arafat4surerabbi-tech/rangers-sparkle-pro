@@ -218,8 +218,7 @@ function Index() {
                   Creating Cleaner, Healthier Business Environments.
                 </h1>
                 <p className="fade-up mt-4 text-base text-white/85 sm:text-lg">
-                  Enjoy a spotless space with our trusted cleaning professionals.<br />
-                  Eco-friendly, flexible, and always on time.
+                  Trusted by businesses for reliable commercial cleaning services that enhance workplace appearance, improve sanitation, and maintain a clean, welcoming environment customers and employees can appreciate.
                 </p>
                 <div className="fade-up mt-6 flex flex-wrap items-center gap-3">
                   <button
@@ -234,22 +233,6 @@ function Index() {
                   >
                     See Our Services
                   </button>
-                </div>
-              </div>
-
-              <div className="fade-up mt-8 flex items-center gap-3 text-white">
-                <div className="flex -space-x-2">
-                  {[about1, about2, about3].map((src, i) => (
-                    <img key={i} src={src} alt="" className="h-9 w-9 rounded-full border-2 border-white object-cover" />
-                  ))}
-                </div>
-                <div className="flex items-center gap-1 text-sm">
-                  <Star className="h-4 w-4 fill-[#2CADE2] text-[#2CADE2]" />
-                  <span className="font-semibold">4.5</span>
-                  <span className="text-white/70">(4,254+ reviews)</span>
-                </div>
-                <div className="ml-2 hidden text-xs text-white/80 sm:block">
-                  Over 500 people have trusted us and left<br />positive reviews. Join them!
                 </div>
               </div>
             </div>
