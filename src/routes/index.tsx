@@ -13,8 +13,8 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
-import heroImg from "../assets/hero.jpg";
-import hero2 from "@/assets/hero-2.jpg";
+import heroImg from "@/assets/hero-monu-1.jpg";
+import hero2 from "@/assets/hero-monu-2.jpg";
 import about1 from "@/assets/about-1.png";
 import about2 from "@/assets/about-2.png";
 import about3 from "@/assets/about-3.png";
