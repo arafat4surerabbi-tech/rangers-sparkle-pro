@@ -138,9 +138,9 @@ function Index() {
 
   return (
     <div id="home" className="min-h-screen bg-[#EDEEF0] text-[color:var(--foreground)]">
-      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 sm:py-3 lg:px-8">
         {/* HEADER */}
-        <header className="px-2 py-2 sm:px-4">
+        <header className="px-2 py-1 sm:px-4">
           <div className="flex items-center justify-between gap-3">
             <a
               href="#home"
@@ -194,7 +194,7 @@ function Index() {
         </header>
 
         {/* HERO */}
-        <section className="relative mt-4 overflow-hidden">
+        <section className="relative mt-2 overflow-hidden">
           <div className="relative h-[480px] w-full sm:h-[560px]">
             {HERO_SLIDES.map((src, i) => (
               <img
@@ -211,7 +211,7 @@ function Index() {
             ))}
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="absolute inset-0 flex items-end p-6 sm:p-10 lg:p-14">
+          <div className="absolute inset-0 flex items-end p-6 pb-4 sm:p-10 sm:pb-6 lg:p-14 lg:pb-8">
             <div className="w-full">
               <div className="max-w-xl text-white">
                 <h1 className="fade-up font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
